@@ -1,0 +1,16 @@
+{
+    "name": "vendor/case_server",
+    "require": {
+        "mongodb/mongodb": "^1.4",
+      "ext-mbstring": "*",
+      "ext-pdo": "*",
+      "ext-json": "*"
+    },
+    "authors": [
+        {
+            "name": "Simraki",
+            "email": "Simraki@mail.ru"
+        }
+    ],
+  "description": ""
+}
