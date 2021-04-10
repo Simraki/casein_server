@@ -1,4 +1,8 @@
 <?php
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+
 require_once '../../src/Methods.php';
 require_once '../../src/Check/DataCheck.php';
 require_once '../../src/RPC/JSON_RPC.php';

@@ -4,7 +4,8 @@
         "mongodb/mongodb": "^1.4",
       "ext-mbstring": "*",
       "ext-pdo": "*",
-      "ext-json": "*"
+      "ext-json": "*",
+      "ext-mongodb": "*"
     },
     "authors": [
         {

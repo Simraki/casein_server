@@ -1,5 +1,8 @@
 <?php
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+
 require_once '../../src/Methods.php';
 require_once '../../src/Check/DataCheck.php';
 require_once '../../src/RPC/JSON_RPC.php';
@@ -39,6 +42,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } elseif ($method == "login") {
                 if ($check->checkDataLoginUser($params)) {
                     echo $methods->login($params);
+                } else {
+                    echo error(ERR_INVALID_PARAMS, $method);
+                }
+            } elseif ($method == "getScore") {
+                if ($check->checkDataGetScoreUser($params)) {
+                    echo $methods->getScore($params);
+                } else {
+                    echo error(ERR_INVALID_PARAMS, $method);
+                }
+            } elseif ($method == "getTasks") {
+                if ($check->checkDataGetTasksUser($params)) {
+                    echo $methods->getTasks($params);
+                } else {
+                    echo error(ERR_INVALID_PARAMS, $method);
+                }
+            } elseif ($method == "getCurators") {
+                if ($check->checkDataGetCuratorsUser($params)) {
+                    echo $methods->getCurators($params);
                 } else {
                     echo error(ERR_INVALID_PARAMS, $method);
                 }

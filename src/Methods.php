@@ -34,4 +34,22 @@ class Methods {
 
         return $this->rpc->makeResultResponse($db->login($params));
     }
+
+    public function getScore($params) {
+        $db = $this->db;
+
+        return $this->rpc->makeResultResponse($db->getScore($params));
+    }
+
+    public function getTasks($params) {
+        $db = $this->db;
+
+        return $this->rpc->makeResultResponse($db->getTasks($params));
+    }
+
+    public function getCurators($params) {
+        $db = $this->db;
+
+        return $this->rpc->makeResultResponse($db->getCurators($params));
+    }
 }

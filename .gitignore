@@ -1,2 +1,4 @@
 /vendor/
 /.idea/
+/bin/User/*.log
+/bin/Admin/*.log
